@@ -1,0 +1,249 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Shutter - Clone</title>
+
+<style>
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background: #111;
+    color: white;
+}
+.navbar {
+    width: 100%;
+    padding: 25px 8%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background: #111;
+}
+
+.logo {
+    font-size: 27px;
+    font-weight: bold;
+    letter-spacing: 2px;
+}
+
+.logo span {
+    color: #f15a29;
+}
+
+.navbar ul {
+    display: flex;
+    list-style: none;
+    gap: 30px;
+}
+
+.navbar ul a {
+    color: #ddd;
+    text-decoration: none;
+    font-size: 14px;
+    transition: 0.3s;
+}
+
+.navbar ul a:hover,
+.navbar ul a.active {
+    color: #f15a29;
+}
+.hero {
+    text-align: center;
+    padding: 65px 20px 45px;
+}
+
+.hero h1 {
+    font-size: 42px;
+    margin-bottom: 15px;
+}
+
+.hero h1 span {
+    color: #f15a29;
+}
+
+.hero p {
+    color: #aaa;
+    line-height: 1.7;
+}
+
+.gallery {
+    max-width: 1200px;
+    margin: auto;
+    padding: 20px 25px 70px;
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 25px;
+}
+
+.photo {
+    position: relative;
+    overflow: hidden;
+    height: 300px;
+    background: #000000;
+ 
+   
+}
+
+.photo img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    display: block;
+    transition: transform 0.5s;
+}
+
+
+
+
+.photo .overlay {
+    position: absolute;
+    inset: 0;
+    background: rgba(0,0,0,0.55);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    transition: 0.4s;
+}
+
+.photo:hover .overlay {
+    opacity: 1;
+}
+
+.overlay h3 {
+    font-size: 22px;
+    margin-bottom: 8px;
+}
+
+.overlay p {
+    color: #f15a29;
+    font-size: 14px;
+}
+footer {
+    text-align: center;
+    padding: 25px;
+    background: #191919;
+    color: #999;
+    font-size: 14px;
+}
+
+footer span {
+    color: #f15a29;
+}
+
+@media (max-width: 768px) {
+    .navbar {
+        padding: 20px 5%;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    .navbar ul {
+        gap: 16px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    .hero h1 {
+        font-size: 32px;
+    }
+
+    .gallery {
+        grid-template-columns: repeat(2, 1fr);
+        gap: 15px;
+        padding: 15px;
+    }
+
+    .photo {
+        height: 240px;
+    }
+
+}
+</style>
+</head>
+
+<body>
+
+<nav class="navbar">
+    <div class="logo">SHUT<span>TER</span></div>
+
+    <ul>
+        <li><a href="#" class="active">Home</a></li>
+        <li><a href="#gallery">Photos</a></li>
+        <li><a href="#about">About</a></li>
+        <li><a href="contact.html">Contact</a></li>
+    </ul>
+</nav>
+<section class="hero">
+    <h1>My <span>Clone Web</span></h1>
+   
+</section>
+
+<section class="gallery" id="gallery">
+
+    <div class="photo">
+        <img src="img1.avif" alt="photos tiltle ">
+        <div class="overlay">
+            <h3>photos title</h3>
+            <p>photos 42</p>
+        </div>
+    </div>
+
+    <div class="photo">
+        <img src="img2.avif" alt="photos tiltle">
+        <div class="overlay">
+           <h3>photos title</h3>
+            <p>photos 42</p>
+           
+        </div>
+    </div>
+
+    <div class="photo">
+        <img src="img2.avif" alt="">
+        <div class="overlay">
+             <h3>photos title</h3>
+            <p>photos 42</p>
+        </div>
+    </div>
+
+    <div class="photo">
+        <img src="img4.avif" alt="">
+        <div class="overlay">
+             <h3>photos title</h3>
+            <p>photos 42</p>
+        </div>
+    </div>
+
+    <div class="photo">
+        <img src="img5.avif" alt="">
+        <div class="overlay">
+             <h3>photos title</h3>
+            <p>photos 42</p>
+        </div>
+    </div>
+
+    <div class="photo">
+        <img src="img6.avif" alt="">
+        <div class="overlay">
+            <h3>photos title</h3>
+            <p>photos 42</p>
+        </div>
+    </div>
+
+</section>
+
+
+<footer id="about">
+   Clone Shutter | Made  by Zain <span>♥</span>
+</footer>
+
+</body>
+</html>
